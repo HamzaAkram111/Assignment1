@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AppName</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- ✅ Navbar -->
+  <nav class="bg-white shadow sticky top-0 z-50">
+    <div class="container mx-auto flex items-center justify-between h-16 px-4">
+      <a href="#home" class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-gradient-to-br from-purple-600 to-indigo-500 rounded-md flex items-center justify-center text-white font-bold">A</div>
+        <span class="font-semibold text-lg">AppName</span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-6">
+        <a href="#home" class="hover:text-indigo-600">Home</a>
+        <a href="#about" class="hover:text-indigo-600">About</a>
+        <a href="#contact" class="hover:text-indigo-600">Contact</a>
+      </div>
+
+      <div class="hidden md:flex items-center gap-3">
+        <a href="#signup" class="px-4 py-2 border rounded text-sm">Sign Up</a>
+        <a href="#signin" class="px-4 py-2 bg-indigo-600 text-white rounded text-sm">Sign In</a>
+      </div>
+
+      <div class="md:hidden">
+        <button id="menuBtn" aria-label="Toggle menu" class="p-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
+      <a href="#home" class="block py-2 hover:text-indigo-600">Home</a>
+      <a href="#about" class="block py-2 hover:text-indigo-600">About</a>
+      <a href="#contact" class="block py-2 hover:text-indigo-600">Contact</a>
+      <a href="#signup" class="block py-2 hover:text-indigo-600">Sign Up</a>
+      <a href="#signin" class="block py-2 hover:text-indigo-600">Sign In</a>
+    </div>
+  </nav>
+
+  <!-- ✅ Home Section -->
+  <section id="home" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20 text-center">
+    <h1 class="text-4xl font-bold mb-4">Welcome to AppName</h1>
+    <p class="text-lg mb-6">Your one-stop solution for modern web experiences.</p>
+    <a href="#signup" class="bg-white text-indigo-700 px-6 py-3 rounded-md font-semibold hover:bg-gray-100">Get Started</a>
+  </section>
+
+  <!-- ✅ About Section -->
+  <section id="about" class="py-20 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6">About Us</h2>
+      <p class="max-w-2xl mx-auto mb-10">We are passionate about building web solutions that are clean, fast, and user-friendly. Our mission is to bring creativity and technology together.</p>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 border rounded-lg shadow hover:shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">Our Vision</h3>
+          <p>To be the leading platform for digital innovation worldwide.</p>
+        </div>
+        <div class="p-6 border rounded-lg shadow hover:shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">Our Mission</h3>
+          <p>Deliver exceptional experiences through quality code and design.</p>
+        </div>
+        <div class="p-6 border rounded-lg shadow hover:shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">Our Team</h3>
+          <p>We are a group of passionate developers, designers, and innovators.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ Contact Section -->
+  <section id="contact" class="bg-gray-100 py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+      <p class="max-w-2xl mx-auto mb-10">We’d love to hear from you! Fill out the form below to get in touch.</p>
+
+      <form action="https://formspree.io/f/your_form_id" method="POST" class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-md space-y-4">
+        <input type="text" name="name" placeholder="Your Name" required class="w-full border px-4 py-2 rounded" />
+        <input type="email" name="email" placeholder="Your Email" required class="w-full border px-4 py-2 rounded" />
+        <textarea name="message" placeholder="Your Message" required class="w-full border px-4 py-2 rounded h-32"></textarea>
+        <button type="submit" class="w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ✅ Sign Up Section -->
+  <section id="signup" class="py-20 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6">Sign Up</h2>
+      <form class="max-w-md mx-auto space-y-4">
+        <input type="text" placeholder="Full Name" class="w-full border px-4 py-2 rounded" required>
+        <input type="email" placeholder="Email" class="w-full border px-4 py-2 rounded" required>
+        <input type="password" placeholder="Password" class="w-full border px-4 py-2 rounded" required>
+        <button class="w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700">Create Account</button>
+        <p class="text-sm mt-2">Already have an account? <a href="#signin" class="text-indigo-600 hover:underline">Sign In</a></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ✅ Sign In Section -->
+  <section id="signin" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6">Sign In</h2>
+      <form class="max-w-md mx-auto space-y-4">
+        <input type="email" placeholder="Email" class="w-full border px-4 py-2 rounded" required>
+        <input type="password" placeholder="Password" class="w-full border px-4 py-2 rounded" required>
+        <button class="w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700">Login</button>
+        <p class="text-sm mt-2">Don’t have an account? <a href="#signup" class="text-indigo-600 hover:underline">Sign Up</a></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ✅ Footer -->
+  <footer class="bg-indigo-600 text-white py-6 text-center">
+    <p>&copy; 2025 AppName. All Rights Reserved.</p>
+  </footer>
+
+  <!-- ✅ Script for Mobile Menu -->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+</body>
+</html>
